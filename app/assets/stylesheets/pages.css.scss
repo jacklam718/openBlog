@@ -1,0 +1,52 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+p {
+  text-align: center;
+  margin-bottom: 1em;
+  border: 0;
+  font-family: monaco;
+}
+
+img.icon {
+  border: 6px solid #d3dfd7;
+  margin-top: 30px;
+  margin-bottom:0px;
+}
+
+blockquote {
+  background-color: #f0f0f0;
+  border-left: #f0f0f0;
+  margin: 0px 40px 30px 40px;
+  border-radius: 4px;
+  width: auto;
+}
+
+.inner {
+  background: #FFF;
+  padding-bottom: 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0px 0px 8px #999;
+  -webkit-box-shadow: 0px 0px 8px #999;
+  box-shadow: 15px 15px 50px #999;
+
+  width: auto;
+  position:relative;
+}
+
+.inner:after {
+  content:"\0020";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+  overflow:hidden;
+}
+
+.about-title {
+  font-family: monaco;
+  margin-top: 30px;
+  padding: 10px;
+}

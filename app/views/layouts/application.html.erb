@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenBlog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+        <button class="navbar-toggle" type="button" data-toggle="navbar-toggle collapse" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/">Blog</a>
+      </div>
+
+      <!-- navbar -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <p class="navbar-text pull-right">
+
+        </p>
+
+       <ul class="nav  navbar-nav">
+         <p class="navbar-text pull-right">
+         <% if user_signed_in? %>
+           Logged in as <strong><%= current_user.email %></strong>.
+           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+         <% else %>
+           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+           <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+         <% end %>
+         </p>
+
+
+         <!-- navbar items -->
+         <li class="active"><%= link_to "About", pages_about_path %></li>
+         <li><%= link_to "New Article", new_article_path %></li>
+       </ul>
+      </div>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <footer>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center footer-statement">
+          <small><i>Jack's Blog 2014</i></small>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

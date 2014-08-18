@@ -1,0 +1,54 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bv {
+  box-sizing: border-box;
+}
+
+.bv .tab-content .active {
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: none;
+}
+
+.bv .tab-pane {
+  padding: 10px 15px;
+}
+
+.tab-content .active{
+  display: blok;
+}
+
+.tab-content {
+  padding: 0px -20px 10px -20px;
+}
+
+.nav > li > a{
+  // margin: 0px 0px 0px 0px;
+  line-height: 1.4;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs > li > a {
+  // margin: 0px -20px 0px -20px;
+  line-height: 1.4;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+.nav-tabs.nav-justified > li > a {
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+  margin: 20px -11px 0px -10px;
+}

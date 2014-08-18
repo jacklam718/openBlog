@@ -1,0 +1,58 @@
+<div class="row" id="tickets-container">
+  <div class="col-md-12">
+    <h3>Settings</h3>
+
+    <div class="bv">
+      <ul id="tabs" class="nav nav-tabs nav-justified" data-tabs="tabs">
+        <li id="tab1" class="active">
+          <a href="#user-tab" data-toggle="tab">About</a>
+        </li>
+        <li id="tab2">
+          <a href="#article-tab" data-toggle="tab">Article</a>
+        </li>
+        <li id="tab3">
+          <a href="#setting-tab" data-toggle="tab">Setting</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="about-tab">
+          <p>Page 1</p>
+        </div>
+
+        <div class="tab-pane" id="article-tab">
+          <p>Page 2</p>
+        </div>
+
+        <div class="tab-pane" id="setting-tab">
+          <p>Page 3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(".bv a").click(function(e) {
+    stopPropagation(e);
+    handleTabClickEvent(e);
+  });
+
+  function stopPropagation(e) {
+    e.stopPropagation();
+    e.preventDefault();
+  };
+
+  function handleTabClickEvent(e) {
+    var id = e.target.parentElement.id;
+    var tab_pane = {tab1: "about-tab", tab2: "article-tab", tab3: "setting-tab"};
+
+    $("ul li").removeClass("active");
+    $(".tab-content .tab-pane").removeClass("active");
+
+    $("#" + id).addClass("active");
+    $("#" + tab_pane[id]).addClass("active");
+  };
+
+</script>

@@ -1,0 +1,65 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  color: #555;
+  width: 100%;
+}
+
+.index-article-title {
+  margin-bottom:20px;
+}
+
+.index-article-body {
+  height: 200px;
+}
+
+.article {
+  margin: 0px 0px 40px 0px;
+}
+
+.article-title {
+  font-family: inherit;
+  padding: 10px 0px 10px 0px;
+  margin-top: 0px;
+}
+
+.article-content {
+  margin: 0px;
+}
+
+p {
+  margin:0px;
+}
+
+.container {
+  margin-top: 0px;
+}
+
+.form-control {
+  margin: auto;
+  width: 600px;
+  align: center;
+}
+
+
+.field {
+  margin-bottom: 20px;
+}
