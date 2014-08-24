@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   get 'pages/about'
 
+  get 'profiles/about'
+  get 'profiles/setting'
+
   root to: redirect("/articles")
   devise_for :users
   resources :articles
